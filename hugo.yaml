@@ -1,0 +1,73 @@
+baseURL: "https://dadak797.github.io/dev-blog/"
+languageCode: "ko-kr"
+defaultContentLanguage: "ko"
+title: "dadak797's Dev-Blog"
+theme: ["PaperMod"]
+
+hasCJKLanguage: true
+enableRobotsTXT: true
+enableGitInfo: true
+
+pagination:
+  pagerSize: 10
+
+caches:
+  images:
+    dir: ":cacheDir/images"
+
+minify:
+  disableXML: true
+  minifyOutput: true
+
+outputs:
+  home:
+    - HTML
+    - RSS
+    - JSON
+
+params:
+  env: production
+  title: "dadak797's Dev-Blog"
+  description: "개발하면서 배운 내용을 기록하는 공간입니다."
+  author: "dadak797"
+
+  defaultTheme: auto
+  disableThemeToggle: false
+
+  ShowReadingTime: true
+  ShowWordCount: true
+  ShowPostNavLinks: true
+  ShowBreadCrumbs: true
+  ShowCodeCopyButtons: true
+  ShowToc: true
+  TocOpen: false
+
+  homeInfoParams:
+    Title: "안녕하세요."
+    Content: "개발하면서 배운 내용을 기록하는 공간입니다."
+
+  socialIcons:
+    - name: github
+      url: "https://github.com/dadak797"
+
+menu:
+  main:
+    - identifier: posts
+      name: 글
+      url: /posts/
+      weight: 10
+
+    - identifier: archives
+      name: 아카이브
+      url: /archives/
+      weight: 20
+
+    - identifier: search
+      name: 검색
+      url: /search/
+      weight: 30
+
+    - identifier: about
+      name: 소개
+      url: /about/
+      weight: 40
