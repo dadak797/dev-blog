@@ -1,12 +1,96 @@
 baseURL: "https://dadak797.github.io/dev-blog/"
-languageCode: "ko-kr"
 defaultContentLanguage: "ko"
-title: "dadak797's Dev-Blog"
+defaultContentLanguageInSubdir: false
+title: "dadak's Dev Notes"
 theme: ["PaperMod"]
 
-hasCJKLanguage: true
+languages:
+  ko:
+    hasCJKLanguage: true
+    label: "한국어"
+    locale: "ko-KR"
+    weight: 1
+    title: "dadak's Dev Notes"
+    params:
+      languageAltTitle: "한국어"
+      homeInfoParams:
+        Title: "Code. Render. Simulate."
+        Content: |
+          C++로 만들고, 웹에서 렌더링하고, 시뮬레이션으로 검증합니다.
+          Emscripten, WebAssembly, WebGPU, OpenCASCADE, VTK를 중심으로 구현 과정과 시행착오를 기록합니다.
+
+          **C++** · **Graphics** · **Web** · **Simulation** · **Misc**
+    menus:
+      main:
+        - identifier: posts
+          name: 글
+          url: posts/
+          weight: 10
+        - identifier: categories
+          name: 카테고리
+          url: categories/
+          weight: 20
+        - identifier: archives
+          name: 아카이브
+          url: archives/
+          weight: 30
+        - identifier: search
+          name: 검색
+          url: search/
+          weight: 40
+        - identifier: about
+          name: 소개
+          url: about/
+          weight: 50
+  en:
+    hasCJKLanguage: false
+    label: "English"
+    locale: "en-US"
+    weight: 2
+    title: "dadak's Dev Notes"
+    params:
+      description: "A place to document what I learn while developing software."
+      languageAltTitle: "English"
+      homeInfoParams:
+        Title: "Code. Render. Simulate."
+        Content: |
+          Building in C++, rendering on the web, and experimenting with simulation.
+          Notes on Emscripten, WebAssembly, WebGPU, OpenCASCADE, and VTK.
+
+          **C++** · **Graphics** · **Web** · **Simulation** · **Misc**
+    menus:
+      main:
+        - identifier: posts
+          name: Posts
+          url: posts/
+          weight: 10
+        - identifier: categories
+          name: Categories
+          url: categories/
+          weight: 20
+        - identifier: archives
+          name: Archives
+          url: archives/
+          weight: 30
+        - identifier: search
+          name: Search
+          url: search/
+          weight: 40
+        - identifier: about
+          name: About
+          url: about/
+          weight: 50
+
 enableRobotsTXT: true
 enableGitInfo: true
+
+taxonomies:
+  category: categories
+  tag: tags
+
+permalinks:
+  page:
+    posts: /posts/:slugorcontentbasename/
 
 pagination:
   pagerSize: 10
@@ -27,12 +111,14 @@ outputs:
 
 params:
   env: production
-  title: "dadak797's Dev-Blog"
+  title: "dadak's Dev Notes"
   description: "개발하면서 배운 내용을 기록하는 공간입니다."
   author: "dadak797"
 
   defaultTheme: auto
   disableThemeToggle: false
+  disableLangToggle: false
+  displayFullLangName: false
 
   ShowReadingTime: true
   ShowWordCount: true
@@ -42,32 +128,6 @@ params:
   ShowToc: true
   TocOpen: false
 
-  homeInfoParams:
-    Title: "안녕하세요."
-    Content: "개발하면서 배운 내용을 기록하는 공간입니다."
-
   socialIcons:
     - name: github
       url: "https://github.com/dadak797"
-
-menu:
-  main:
-    - identifier: posts
-      name: 글
-      url: /posts/
-      weight: 10
-
-    - identifier: archives
-      name: 아카이브
-      url: /archives/
-      weight: 20
-
-    - identifier: search
-      name: 검색
-      url: /search/
-      weight: 30
-
-    - identifier: about
-      name: 소개
-      url: /about/
-      weight: 40

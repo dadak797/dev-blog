@@ -1,0 +1,19 @@
+.lang-menu a {
+    min-width: 2rem;
+    justify-content: center;
+    font-size: 0;
+}
+
+.lang-menu a::before {
+    font-family: "Apple Color Emoji", "Segoe UI Emoji", "Noto Color Emoji", sans-serif;
+    font-size: 1.25rem;
+    line-height: 1;
+}
+
+.lang-menu a[aria-label="English"]::before {
+    content: "🇺🇸";
+}
+
+.lang-menu a[aria-label="한국어"]::before {
+    content: "🇰🇷";
+}

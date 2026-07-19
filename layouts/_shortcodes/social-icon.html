@@ -1,0 +1,8 @@
+{{- $name := .Get "name" -}}
+{{- $url := .Get "url" -}}
+{{- $title := .Get "title" | default ($name | title) -}}
+<span class="social-icons">
+    <a href="{{ $url | safeURL }}" target="_blank" rel="noopener noreferrer me" title="{{ $title }}" aria-label="{{ $title }}">
+        {{- partial "svg.html" (dict "name" $name) -}}
+    </a>
+</span>
