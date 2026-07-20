@@ -1,9 +1,9 @@
 ---
 title: "About"
 url: "/en/about/"
+ShowToc: false
+TocOpen: false
 ---
-
-Hello.
 
 I'm interested in C++, computer graphics, web technologies, and simulation, with a focus on connecting these technologies in practical projects.
 
